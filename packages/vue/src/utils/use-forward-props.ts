@@ -15,7 +15,8 @@ export function useForwardProps<T extends MaybeRefOrGetter<Record<string, any>>,
   const vm = getCurrentInstance()
   // Default value for declared props
   const defaultProps = Object.keys(vm?.type.props ?? {}).reduce((prev, curr) => {
-    const defaultValue = (vm?.type.props[curr] as PropOptions).default
+    const prop = vm?.type.props?.[curr] as PropOptions | undefined
+    const defaultValue = prop?.default
     if (defaultValue !== undefined) prev[curr as keyof U] = defaultValue
     return prev
   }, {} as U)
