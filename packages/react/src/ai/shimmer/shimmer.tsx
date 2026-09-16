@@ -19,6 +19,7 @@ export function Shimmer({ children, as: Component = 'p', duration = 2, ...props 
     <Component data-scope="shimmer" data-part="root" {...props}>
       {words.map((word, index) => (
         <span
+          data-scope="shimmer"
           data-part="word"
           key={index}
           style={

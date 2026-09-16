@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { Reasoning, ReasoningContent, ReasoningTrigger } from '../reasoning.tsx'
 
 export function Completed() {

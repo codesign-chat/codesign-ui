@@ -1,6 +1,7 @@
 :root {
   /* Coral semantic tokens */
   --demo-coral-solid: #eb5e41;
+  --demo-success: #16a34a;
   --demo-coral-emphasized: #de5045;
   --demo-coral-muted: #ffdbda;
   --demo-coral-subtle: #ffe5e4;
@@ -53,6 +54,7 @@
 .dark {
   /* Coral dark mode */
   --demo-coral-solid: #eb5e41;
+  --demo-success: #16a34a;
   --demo-coral-emphasized: #ef6b4e;
   --demo-coral-muted: #722b25;
   --demo-coral-subtle: #55221e;

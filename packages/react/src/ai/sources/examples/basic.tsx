@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { Source, Sources, SourcesContent, SourcesTrigger } from '../sources.tsx'
 
 export function Basic() {

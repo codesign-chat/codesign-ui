@@ -101,9 +101,21 @@ export type InlineCitationSourceProps = ComponentProps<'div'> & {
 export function InlineCitationSource({ title, url, description, children, ...props }: InlineCitationSourceProps) {
   return (
     <div data-scope="inline-citation" data-part="source" {...props}>
-      {title && <h4 data-part="source-title">{title}</h4>}
-      {url && <p data-part="source-url">{url}</p>}
-      {description && <p data-part="source-description">{description}</p>}
+      {title && (
+        <h4 data-scope="inline-citation" data-part="source-title">
+          {title}
+        </h4>
+      )}
+      {url && (
+        <p data-scope="inline-citation" data-part="source-url">
+          {url}
+        </p>
+      )}
+      {description && (
+        <p data-scope="inline-citation" data-part="source-description">
+          {description}
+        </p>
+      )}
       {children}
     </div>
   )

@@ -37,8 +37,10 @@ export function ToolHeader({ title, type, state, toolName, ...props }: ToolHeade
 
   return (
     <Collapsible.Trigger data-scope="tool" data-part="trigger" {...props}>
-      <span data-part="title">{title ?? derivedName}</span>
-      <span data-part="status" data-status={state}>
+      <span data-scope="tool" data-part="title">
+        {title ?? derivedName}
+      </span>
+      <span data-scope="tool" data-part="status" data-status={state}>
         {statusLabels[state]}
       </span>
     </Collapsible.Trigger>

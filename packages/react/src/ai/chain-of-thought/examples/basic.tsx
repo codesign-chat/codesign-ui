@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { FilePlus2Icon } from 'lucide-react'
 import {
   ChainOfThought,
@@ -11,7 +12,7 @@ import {
 
 export function Basic() {
   return (
-    <ChainOfThought>
+    <ChainOfThought defaultOpen>
       <ChainOfThoughtHeader />
       <ChainOfThoughtContent>
         <ChainOfThoughtStep icon={<FilePlus2Icon />} label="Upload document" status="complete" />
@@ -27,9 +28,9 @@ export function Basic() {
         </ChainOfThoughtStep>
         <ChainOfThoughtStep label="Draft response" status="pending" />
         <ChainOfThoughtImage caption="Reference architecture diagram">
-          <svg aria-hidden="true" height="96" viewBox="0 0 160 96" width="160">
-            <rect fill="none" height="94" stroke="#eb5e41" width="158" x="1" y="1" />
-            <text fill="currentColor" fontSize="12" textAnchor="middle" x="80" y="52">
+          <svg aria-hidden="true" height="96" viewBox="0 0 200 96" width="200">
+            <rect fill="none" height="94" stroke="#eb5e41" width="198" x="1" y="1" />
+            <text fill="currentColor" style={{ fontSize: 12 }} textAnchor="middle" x="100" y="52">
               components → themes
             </text>
           </svg>

@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import {
   InlineCitation,

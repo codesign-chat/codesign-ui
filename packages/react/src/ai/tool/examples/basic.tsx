@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { Tool, ToolContent, ToolHeader, ToolInput, ToolOutput } from '../tool.tsx'
 
 export function Completed() {

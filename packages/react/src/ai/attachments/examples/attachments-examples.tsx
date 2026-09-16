@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { FileTextIcon, GlobeIcon, XIcon } from 'lucide-react'
 import { Attachment } from '../attachments.tsx'
 import { AttachmentEmpty } from '../attachments.tsx'

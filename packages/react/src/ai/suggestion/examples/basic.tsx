@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { useState } from 'react'
 import { Suggestion, Suggestions } from '../suggestion.tsx'
 

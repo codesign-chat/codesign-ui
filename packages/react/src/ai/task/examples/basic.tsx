@@ -1,3 +1,4 @@
+import 'styles/ai.module.css'
 import { Task, TaskContent, TaskItem, TaskItemFile, TaskTrigger } from '../task.tsx'
 
 export function Basic() {

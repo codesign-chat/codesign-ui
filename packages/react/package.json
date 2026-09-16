@@ -158,6 +158,8 @@
     "@zag-js/tree-view": "1.44.0",
     "@zag-js/types": "1.44.0",
     "@zag-js/utils": "1.44.0",
+    "ansi-to-react": "^6.2.6",
+    "shiki": "3.22.0",
     "use-stick-to-bottom": "^1.1.3"
   },
   "devDependencies": {
