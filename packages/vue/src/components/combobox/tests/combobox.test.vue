@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Combobox, type ComboboxRootEmits, type ComboboxRootProps, createListCollection } from '@codesign-ui/vue/combobox'
+import {
+  Combobox,
+  type ComboboxRootEmits,
+  type ComboboxRootProps,
+  createListCollection,
+} from '@codesign-ui/vue/combobox'
 import { useForwardPropsEmits } from '@codesign-ui/vue'
 
 interface Item {

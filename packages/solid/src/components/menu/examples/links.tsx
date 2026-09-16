@@ -12,7 +12,11 @@ export const Links = () => (
     </Menu.Trigger>
     <Menu.Positioner>
       <Menu.Content class={styles.Content}>
-        <Menu.Item class={styles.Item} value="docs" asChild={(props) => <a href="https://codesign.chat" {...props()} />}>
+        <Menu.Item
+          class={styles.Item}
+          value="docs"
+          asChild={(props) => <a href="https://codesign.chat" {...props()} />}
+        >
           Documentation
         </Menu.Item>
         <Menu.Item

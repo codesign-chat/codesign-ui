@@ -2,7 +2,9 @@
   import { FileUpload } from '@codesign-ui/svelte/file-upload'
 </script>
 
-<FileUpload.Root defaultAcceptedFiles={[new File(['Welcome to Codesign UI Svelte'], 'README.md', { type: 'text/plain' })]}>
+<FileUpload.Root
+  defaultAcceptedFiles={[new File(['Welcome to Codesign UI Svelte'], 'README.md', { type: 'text/plain' })]}
+>
   <FileUpload.Label>File Upload</FileUpload.Label>
   <FileUpload.Trigger>Choose file(s)</FileUpload.Trigger>
   <FileUpload.ItemGroup>

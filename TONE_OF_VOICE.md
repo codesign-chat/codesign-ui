@@ -1,7 +1,7 @@
 # Tone of Voice Guide
 
-This document defines the writing style and communication patterns for Codesign UI documentation, blog posts, and marketing
-content.
+This document defines the writing style and communication patterns for Codesign UI documentation, blog posts, and
+marketing content.
 
 ## Core Principles
 
@@ -10,7 +10,8 @@ content.
 Write like a knowledgeable friend explaining something at a coffee shop, not a textbook or corporate manual. Be warm
 without being unprofessional.
 
-**Do:** "Codesign UI handles all the accessibility plumbing so you can focus on what matters—building great experiences."
+**Do:** "Codesign UI handles all the accessibility plumbing so you can focus on what matters—building great
+experiences."
 
 **Don't:** "Codesign UI is an enterprise-grade solution that facilitates accessibility compliance through automated ARIA
 attribute management."

@@ -16,8 +16,8 @@ description: Sync changelog updates from chakra-ui/zag repo to all Codesign UI f
 3. Parse the new changes from Zag.js changelog
    - Extract all entries from the new Zag versions
    - Identify component-specific changes and general improvements
-   - Filter out Zag.js internal changes that don't affect Codesign UI (build system, core state machine internals, docs-only,
-     framework-specific fixes for frameworks Codesign doesn't use like Preact/Vanilla)
+   - Filter out Zag.js internal changes that don't affect Codesign UI (build system, core state machine internals,
+     docs-only, framework-specific fixes for frameworks Codesign doesn't use like Preact/Vanilla)
 
 4. Review the changes with me before applying
    - Show me the extracted changes

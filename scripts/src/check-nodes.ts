@@ -43,7 +43,7 @@ function groupItems(items: Item[]): void {
 
   if (result.length > 0) {
     console.log('The following components have mixed nodes:')
-    result.map(([name, nodes]) => {
+    result.forEach(([name, nodes]) => {
       console.log(name, nodes)
     })
     process.exit(1)

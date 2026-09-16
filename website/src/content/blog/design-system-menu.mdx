@@ -6,8 +6,8 @@ author: 'Esther'
 tags: ['menu', 'codesign-ui', 'design-system']
 ---
 
-The [Menu component](https://codesign.chat/docs/components/menu) is used in web apps for dropdowns, actions, or contextual
-options.
+The [Menu component](https://codesign.chat/docs/components/menu) is used in web apps for dropdowns, actions, or
+contextual options.
 
 In this tutorial, we'll dive deep into styling a feature-rich Menu component. Here are the key styles and
 functionalities we'll cover:
@@ -19,8 +19,8 @@ functionalities we'll cover:
 - **Menu Indicator:** You'll learn how to style and animate the indicator that signals when the menu is open or closed.
 - **Grouped Sections:** We'll style grouped menu items, including section labels and visual separators, to help organize
   long lists.
-- **Checkbox & Radio Items:** Codesign UI supports checkboxes and radio buttons inside menus. We'll organize long lists of
-  menu items with styled section labels and visual separators.
+- **Checkbox & Radio Items:** Codesign UI supports checkboxes and radio buttons inside menus. We'll organize long lists
+  of menu items with styled section labels and visual separators.
 - **Icons and Commands:** Add styles for menus that include icons and keyboard shortcuts with command text.
 
 By the end of this guide, you'll have a scalable approach for styling menus, whether you prefer Vanilla CSS or Panda
@@ -128,8 +128,8 @@ as reset styles, tokens, keyframes, and base button styles.
 > If you haven’t set that up yet, head over to the [Design System Introduction](/blog/design-system-series) to see how
 > to configure your global styles directory.
 
-Codesign UI exposes helpful attributes like `data-scope="menu"` and `data-part="..."` for every part of the menu, which we'll
-use to style each part.
+Codesign UI exposes helpful attributes like `data-scope="menu"` and `data-part="..."` for every part of the menu, which
+we'll use to style each part.
 
 **Styling the Menu Content**
 
@@ -209,8 +209,8 @@ we'll define later.
 
 **Styling the Highlighted & Disabled States**
 
-- **Highlighted state:** When a user hovers over a menu item or navigates to it using the keyboard, Codesign UI automatically
-  applies the `data-highlighted` attribute. We can use this to indicate the active item
+- **Highlighted state:** When a user hovers over a menu item or navigates to it using the keyboard, Codesign UI
+  automatically applies the `data-highlighted` attribute. We can use this to indicate the active item
 
   ```tsx
    [data-scope='menu'][data-part='item'] {
@@ -254,8 +254,8 @@ The indicator automatically receives the `data-part="indicator"` attribute, maki
 }
 ```
 
-Codesign UI automatically applies `data-state="open"` when the menu is expanded. We added a style such that when the menu
-opens, the indicator smoothly rotates to point right
+Codesign UI automatically applies `data-state="open"` when the menu is expanded. We added a style such that when the
+menu opens, the indicator smoothly rotates to point right
 
 **Styling Checkboxes and Radios within Menu Items**
 
@@ -276,8 +276,8 @@ When an item is selected, Codesign UI applies `data-state="checked"` attribute f
 }
 ```
 
-- `data-state="checked"`: When an item is selected, Codesign UI applies this attribute, allowing us to visually distinguish
-  it (e.g., by making the font bold).
+- `data-state="checked"`: When an item is selected, Codesign UI applies this attribute, allowing us to visually
+  distinguish it (e.g., by making the font bold).
 - `data-type`: This attribute is present on all `Menu.CheckboxItem` and `Menu.RadioItem` elements. We use it to create
   the necessary space at the beginning of the item for the checkmark or radio dot icon, ensuring the item's text aligns
   perfectly with other menu items.
@@ -312,8 +312,8 @@ For organizing long lists of menu items, Codesign UI offers grouping capabilitie
 Menu items can include more than just text. We often want to add leading icons or trailing keyboard shortcut hints
 (commands).
 
-Codesign UI automatically applies `data-part="item-text"`, `"data-part='item-indicator"` and `data-part="item-command"`to the
-relevant parts.
+Codesign UI automatically applies `data-part="item-text"`, `"data-part='item-indicator"` and
+`data-part="item-command"`to the relevant parts.
 
 ```css
 [data-scope='menu'][data-part='item-text'] {
@@ -375,8 +375,8 @@ and spacing, thanks to the `data-scope` and `data-part` selectors.
 
 ## Using The Vanilla CSS Classes in Your Component
 
-With these base styles and size variants defined in your `menu.css` , applying them to your Codesign UI Menu component is a
-matter of adding the correct `className` to the `Menu.Trigger`, `Menu.Content` and other parts.
+With these base styles and size variants defined in your `menu.css` , applying them to your Codesign UI Menu component
+is a matter of adding the correct `className` to the `Menu.Trigger`, `Menu.Content` and other parts.
 
 Here's how you would use these classes in a React component:
 
@@ -439,8 +439,8 @@ To style each part of the menu component, we'll create a
 us apply scoped styles to all the distinct parts of the menu, like `item`, `content`, `separator`, `indicator`, and
 more.
 
-We also use `menuAnatomy.keys()` to automatically retrieve all the part names defined in Codesign UI's anatomy for the menu
-component.
+We also use `menuAnatomy.keys()` to automatically retrieve all the part names defined in Codesign UI's anatomy for the
+menu component.
 
 We'll begin by adding the base styles for each part. These are the default, foundational styles that give the `Menu`
 component a consistent foundation, even before any variants are applied.
@@ -652,8 +652,8 @@ that targets the `[data-state='open']` attribute. Now, when the menu is opened, 
 
 **Styling Checkboxes and Radios**
 
-When building interactive menus, you often need to include selectable items like checkboxes and radio buttons. Codesign UI
-provides dedicated components like `Menu.CheckboxItem` and `Menu.RadioItem` for this purpose.
+When building interactive menus, you often need to include selectable items like checkboxes and radio buttons. Codesign
+UI provides dedicated components like `Menu.CheckboxItem` and `Menu.RadioItem` for this purpose.
 
 We'll define their styles directly within the `item` part of our recipe:
 
@@ -691,8 +691,8 @@ Here's a breakdown of the key styling approaches used here:
 
 **Styling Menu Groups**
 
-For organizing longer lists of menu items into logical sections, Codesign UI provides support for menu groups. This includes
-dedicated parts for both group labels and visual separators.
+For organizing longer lists of menu items into logical sections, Codesign UI provides support for menu groups. This
+includes dedicated parts for both group labels and visual separators.
 
 Here's how we style the `itemGroupLabel` and `separator` parts:
 
@@ -738,11 +738,11 @@ Codesign UI provides the `itemText` and `itemIndicator` parts, but for a custom 
 
 **Extending the Menu Anatomy for Custom Parts**
 
-Panda CSS's recipe system is quite flexible. While `menuAnatomy.keys()` gives us all the standard parts exposed by Codesign
-UI, we can easily add our own by introducing a custom slot named `itemCommand`.
+Panda CSS's recipe system is quite flexible. While `menuAnatomy.keys()` gives us all the standard parts exposed by
+Codesign UI, we can easily add our own by introducing a custom slot named `itemCommand`.
 
-This explicitly tells Panda CSS to expect and generate styles for this new part, even though it's not part of Codesign UI's
-default structure.
+This explicitly tells Panda CSS to expect and generate styles for this new part, even though it's not part of Codesign
+UI's default structure.
 
 Add `'itemCommand'` to the array of slots when defining our `menuRecipe`:
 

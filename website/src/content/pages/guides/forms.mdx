@@ -10,8 +10,8 @@ libraries like [React Hook Form](https://react-hook-form.com/), [TanStack Form](
 
 ## Field Context
 
-Form components in Codesign UI automatically integrate with `Field` through context. When nested inside a `Field.Root`, they
-inherit `disabled`, `invalid`, `required`, and `readOnly` states automatically.
+Form components in Codesign UI automatically integrate with `Field` through context. When nested inside a `Field.Root`,
+they inherit `disabled`, `invalid`, `required`, and `readOnly` states automatically.
 
 ```tsx
 import { Field } from '@codesign-ui/react/field'
@@ -137,8 +137,8 @@ const Demo = () => (
 
 ### Form Reset
 
-When the `reset` event is triggered on a form, all Codesign UI components automatically sync their internal state with the
-form's reset values.
+When the `reset` event is triggered on a form, all Codesign UI components automatically sync their internal state with
+the form's reset values.
 
 > **Note**: For this to work correctly, always include the `HiddenInput` component in your form controls. The hidden
 > input participates in the native form reset mechanism, and Codesign UI listens for this to sync the component state.
@@ -228,8 +228,8 @@ const Demo = () => (
 
 ## React Hook Form
 
-Codesign UI integrates seamlessly with React Hook Form. Use the `register` function for simple inputs and `Controller` for
-complex components.
+Codesign UI integrates seamlessly with React Hook Form. Use the `register` function for simple inputs and `Controller`
+for complex components.
 
 ### Native Controls
 
@@ -456,7 +456,8 @@ validates with [Valibot](https://valibot.dev/) and infers all input and output t
 
 ### Native Controls
 
-Since Formisch also exports a `Field` component, import it under an alias to avoid a name clash with Codesign UI's `Field`.
+Since Formisch also exports a `Field` component, import it under an alias to avoid a name clash with Codesign UI's
+`Field`.
 
 ```tsx
 import { Field } from '@codesign-ui/react/field'

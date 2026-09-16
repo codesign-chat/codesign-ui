@@ -29,5 +29,11 @@
 </script>
 
 {#if !presence().unmounted}
-  <Codesign as="div" bind:ref {...mergedProps} {@attach setNode} hidden={mergedProps.hidden || !tour().step?.backdrop} />
+  <Codesign
+    as="div"
+    bind:ref
+    {...mergedProps}
+    {@attach setNode}
+    hidden={mergedProps.hidden || !tour().step?.backdrop}
+  />
 {/if}

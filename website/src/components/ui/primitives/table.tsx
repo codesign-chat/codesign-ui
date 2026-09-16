@@ -20,7 +20,10 @@ export const Caption = withContext<HTMLTableCaptionElement, Assign<HTMLStyledPro
   'caption',
 )
 
-export const Cell = withContext<HTMLTableCellElement, Assign<HTMLStyledProps<'td'>, PolymorphicProps>>(codesign.td, 'cell')
+export const Cell = withContext<HTMLTableCellElement, Assign<HTMLStyledProps<'td'>, PolymorphicProps>>(
+  codesign.td,
+  'cell',
+)
 
 export const Foot = withContext<HTMLTableSectionElement, Assign<HTMLStyledProps<'tfoot'>, PolymorphicProps>>(
   codesign.tfoot,

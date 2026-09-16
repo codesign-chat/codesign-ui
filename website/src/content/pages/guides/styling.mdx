@@ -6,9 +6,9 @@ description: Learn how to style Codesign UI components.
 
 ## Overview
 
-Codesign UI is a headless component library that works with any styling solution. It provides functional styles for elements
-like popovers for positioning, while leaving presentation styles up to you. Some components also expose CSS variables
-that can be used for styling or animations.
+Codesign UI is a headless component library that works with any styling solution. It provides functional styles for
+elements like popovers for positioning, while leaving presentation styles up to you. Some components also expose CSS
+variables that can be used for styling or animations.
 
 > **Tip:** Looking for a ready-to-use solution? Checkout [Park UI](https://park-ui.com) for a collection of pre-designed
 > styles based on Codesign UI components.
@@ -55,8 +55,8 @@ To style a component based on its state, use the `data-state` attribute:
 
 ### Class Names
 
-If you prefer using classes instead of data attributes, utilize `class` or `className` prop to add custom classes to Codesign
-UI components.
+If you prefer using classes instead of data attributes, utilize `class` or `className` prop to add custom classes to
+Codesign UI components.
 
 Pass a class:
 
@@ -80,8 +80,8 @@ Then use in styles:
 
 ## Z-Index
 
-Codesign UI does not prescribe a global z-index scale. You decide the base z-index value for overlays, and Codesign exposes Zag's
-`--layer-index` variable to keep stacked overlays in the right order.
+Codesign UI does not prescribe a global z-index scale. You decide the base z-index value for overlays, and Codesign
+exposes Zag's `--layer-index` variable to keep stacked overlays in the right order.
 
 `--layer-index` is a zero-based index for open dismissible layers. Use it as an offset from your base z-index, not as
 the full z-index value.
@@ -181,8 +181,8 @@ providing an efficient styling solution.
 Panda offers various ways to write styles, but in the context of Codesign UI, we recommend using the `defineSlotRecipe`
 function to style a component with its different parts and variants.
 
-> **Important:** When importing anatomy objects, we recommend using the `@codesign-ui/<framework>/anatomy` entrypoint (e.g.,
-> `@codesign-ui/react/anatomy`) instead of the main package export to avoid potential build and import errors.
+> **Important:** When importing anatomy objects, we recommend using the `@codesign-ui/<framework>/anatomy` entrypoint
+> (e.g., `@codesign-ui/react/anatomy`) instead of the main package export to avoid potential build and import errors.
 
 ```ts
 import { accordionAnatomy } from '@codesign-ui/react/anatomy'

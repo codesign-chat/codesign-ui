@@ -2,7 +2,9 @@ import { FileUpload } from '@codesign-ui/solid/file-upload'
 import { For } from 'solid-js'
 
 export const InitialFiles = () => (
-  <FileUpload.Root defaultAcceptedFiles={[new File(['Welcome to Codesign UI Solid'], 'README.md', { type: 'text/plain' })]}>
+  <FileUpload.Root
+    defaultAcceptedFiles={[new File(['Welcome to Codesign UI Solid'], 'README.md', { type: 'text/plain' })]}
+  >
     <FileUpload.Label>File Upload</FileUpload.Label>
     <FileUpload.Trigger>Choose file(s)</FileUpload.Trigger>
     <FileUpload.ItemGroup>

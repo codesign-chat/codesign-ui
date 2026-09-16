@@ -6,8 +6,9 @@
 
 # Welcome to Codesign UI
 
-Codesign UI is a headless, open-source UI library with over 45+ components designed for building reusable, scalable Design
-Systems. It supports a wide range of JavaScript frameworks, offering dedciated packages for each supported framework.
+Codesign UI is a headless, open-source UI library with over 45+ components designed for building reusable, scalable
+Design Systems. It supports a wide range of JavaScript frameworks, offering dedciated packages for each supported
+framework.
 
 ## Supported Frameworks
 
@@ -105,14 +106,16 @@ For more detailed documentation and examples, please visit the [official documen
 
 ## Roadmap
 
-You can request, vote for, and check upcoming features on our [roadmap](https://github.com/codesign-chat/codesign-ui/issues/).
+You can request, vote for, and check upcoming features on our
+[roadmap](https://github.com/codesign-chat/codesign-ui/issues/).
 
 ## Contribution
 
 We welcome contributions to Codesign UI. Please read our
-[contributing guidelines](https://github.com/codesign-chat/codesign-ui/blob/main/CONTRIBUTING.md) for more information on how to
-contribute.
+[contributing guidelines](https://github.com/codesign-chat/codesign-ui/blob/main/CONTRIBUTING.md) for more information
+on how to contribute.
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/codesign-chat/codesign-ui/blob/main/LICENSE).
+This project is licensed under the terms of the
+[MIT license](https://github.com/codesign-chat/codesign-ui/blob/main/LICENSE).

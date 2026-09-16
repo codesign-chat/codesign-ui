@@ -2,7 +2,13 @@
 // biome-ignore lint/style/useImportType: intentional
 import { Combobox, useListCollection } from '@codesign-ui/vue/combobox'
 import { Dialog } from '@codesign-ui/vue/dialog'
-import { createHotkeyStore, useFormatHotkey, useHotkey, useHotkeyRegistrations, useHotkeys } from '@codesign-ui/vue/hotkeys'
+import {
+  createHotkeyStore,
+  useFormatHotkey,
+  useHotkey,
+  useHotkeyRegistrations,
+  useHotkeys,
+} from '@codesign-ui/vue/hotkeys'
 import { useFilter } from '@codesign-ui/vue/locale'
 import { CornerDownLeftIcon, SearchIcon } from 'lucide-vue-next'
 import { ref, watch } from 'vue'

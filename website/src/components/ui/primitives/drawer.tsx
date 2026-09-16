@@ -51,11 +51,17 @@ export const Trigger = withContext<HTMLButtonElement, Assign<HTMLStyledProps<'bu
   'trigger',
 )
 
-export const Header = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(codesign.div, 'header')
+export const Header = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(
+  codesign.div,
+  'header',
+)
 
 export const Body = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(codesign.div, 'body')
 
-export const Footer = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(codesign.div, 'footer')
+export const Footer = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(
+  codesign.div,
+  'footer',
+)
 
 export const Grabber = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, Drawer.GrabberBaseProps>>(
   Drawer.Grabber,

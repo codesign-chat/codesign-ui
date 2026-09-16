@@ -27,5 +27,9 @@ useForwardExpose()
 </script>
 
 <template>
-  <codesign.input v-bind="passwordInput.getInputProps()" :aria-describedby="field?.ariaDescribedby" :as-child="asChild" />
+  <codesign.input
+    v-bind="passwordInput.getInputProps()"
+    :aria-describedby="field?.ariaDescribedby"
+    :as-child="asChild"
+  />
 </template>

@@ -28,7 +28,7 @@ const main = async () => {
       name: entry.name,
       diff: diffArray(entry.indexExports, entry.componentExports),
     }))
-    .map((diff) => {
+    .forEach((diff) => {
       if (diff.diff.inFirstOnly.length > 0 || diff.diff.inSecondOnly.length > 0) {
         console.log(diff)
       }

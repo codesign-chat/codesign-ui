@@ -84,8 +84,8 @@
 - Fix `Fieldset.Root` re-rendering whenever its subtree mutated, even if helper and error text were unchanged. A nested
   `Field.Textarea` with `defaultValue` could turn that into a loop that froze the tab.
 
-- Fix Next.js 15 production builds failing because React's optional `Activity` export was imported statically. Codesign now
-  resolves `Activity` at runtime and falls back to `display-none` when the active React build does not expose it.
+- Fix Next.js 15 production builds failing because React's optional `Activity` export was imported statically. Codesign
+  now resolves `Activity` at runtime and falls back to `display-none` when the active React build does not expose it.
 
 - - **Date Picker**
     - Fix `translations` requiring every message. It's now `Partial`, so you can override one message and let the rest

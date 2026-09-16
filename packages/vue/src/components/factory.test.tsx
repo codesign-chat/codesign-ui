@@ -4,7 +4,14 @@ import { createCommentVNode, defineComponent, h, nextTick, ref } from 'vue'
 import { codesign } from './factory.ts'
 
 const ComponentUnderTest = (
-  <codesign.div id="parent" data-part="parent" data-testid="parent" className="parent" style={{ background: 'red' }} asChild>
+  <codesign.div
+    id="parent"
+    data-part="parent"
+    data-testid="parent"
+    className="parent"
+    style={{ background: 'red' }}
+    asChild
+  >
     <codesign.span id="child" data-part="child" data-testid="child" className="child" style={{ color: 'blue' }}>
       Codesign UI
     </codesign.span>

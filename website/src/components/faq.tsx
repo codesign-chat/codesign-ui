@@ -8,8 +8,8 @@ export const Faq = () => {
       question: 'What is Codesign UI?',
       answer: (
         <div>
-          Codesign UI is a powerful headless component library that provides more than 40+ components and tools to help you
-          build accessible, complex, and feature-rich UI design systems.
+          Codesign UI is a powerful headless component library that provides more than 40+ components and tools to help
+          you build accessible, complex, and feature-rich UI design systems.
         </div>
       ),
     },

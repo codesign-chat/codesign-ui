@@ -58,7 +58,11 @@ export const Community = () => {
               </a>
             </Button>
             <Button size={{ base: 'lg', md: 'xl' }} asChild>
-              <a href="https://github.com/codesign-chat/codesign-ui/discussions" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/codesign-chat/codesign-ui/discussions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Join Discord
               </a>
             </Button>

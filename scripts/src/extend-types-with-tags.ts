@@ -25,7 +25,7 @@ const main = async () => {
         tag: match?.[1],
       }
     })
-    .map((item) => {
+    .forEach((item) => {
       const { name, component, tag } = item
       if (!tag) {
         if (!name.includes('Context') && !name.includes('Root')) {
@@ -38,7 +38,7 @@ const main = async () => {
       const content = Object.fromEntries(
         Object.entries(types).map(([key, value]) => {
           if (key === name) {
-            // @ts-ignore
+            // @ts-expect-error
             return [key, { ...value, tag }]
           }
           return [key, value]

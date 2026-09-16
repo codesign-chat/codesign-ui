@@ -26,5 +26,11 @@
 </script>
 
 {#if colorPicker().format === formatProps.format}
-  <Codesign as="div" bind:ref data-format={formatProps.format} {...colorPickerAnatomy.build().view.attrs} {...localProps} />
+  <Codesign
+    as="div"
+    bind:ref
+    data-format={formatProps.format}
+    {...colorPickerAnatomy.build().view.attrs}
+    {...localProps}
+  />
 {/if}

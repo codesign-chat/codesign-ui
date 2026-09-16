@@ -12,7 +12,9 @@ export const ColorPickerFormatSelect = (props: ColorPickerFormatSelectProps) => 
 
   return (
     <codesign.select {...mergedProps}>
-      <Index each={['rgba', 'hsla', 'hsba']}>{(format) => <codesign.option value={format()}>{format()}</codesign.option>}</Index>
+      <Index each={['rgba', 'hsla', 'hsba']}>
+        {(format) => <codesign.option value={format()}>{format()}</codesign.option>}
+      </Index>
     </codesign.select>
   )
 }

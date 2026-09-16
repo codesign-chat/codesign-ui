@@ -31,8 +31,9 @@ By the end, you’ll have a flexible, scalable pattern for styling accordions th
 
 ## Anatomy
 
-Before we dive into specific styles, it's essential to understand the parts that make up the Codesign UI Accordion component.
-Each part supports the `data-scope` and `data-part` attributes, which you can target in both Vanilla CSS and Panda CSS.
+Before we dive into specific styles, it's essential to understand the parts that make up the Codesign UI Accordion
+component. Each part supports the `data-scope` and `data-part` attributes, which you can target in both Vanilla CSS and
+Panda CSS.
 
 <Anatomy id="accordion" />
 
@@ -117,8 +118,8 @@ With a recipe for Accordion, you can:
 
 ### Base Styles
 
-We’ll start by defining foundational styles for each part of the `Accordion` component using Codesign UI’s attributes like
-`data-scope="accordion"` and `data-part="..."`.
+We’ll start by defining foundational styles for each part of the `Accordion` component using Codesign UI’s attributes
+like `data-scope="accordion"` and `data-part="..."`.
 
 Before defining the base styles for the Accordion, **make sure your project includes the shared global styles** we use
 across the design system, such as reset styles, tokens, keyframes, and base button styles.
@@ -285,8 +286,8 @@ open.
 
 #### Styling the Item Body (Custom Part)
 
-Although Codesign UI doesn’t include an `item-body` part by default, we’ll create this part ourselves when applying styles.
-The item body serves as a wrapper around the content inside each accordion item. Let's style it:
+Although Codesign UI doesn’t include an `item-body` part by default, we’ll create this part ourselves when applying
+styles. The item body serves as a wrapper around the content inside each accordion item. Let's style it:
 
 ```tsx
 [data-scope='accordion'][data-part='item-body'] {
@@ -785,16 +786,16 @@ The `_icon` key ensures the SVG maintains consistent dimensions.
 
 #### Styling the Item Body (Custom Part)
 
-Although not provided by default in Codesign UI, we’ll add a custom `itemBody` part to manage spacing within item content. To
-style this custom part, we’ll need to extend our accordion recipe.
+Although not provided by default in Codesign UI, we’ll add a custom `itemBody` part to manage spacing within item
+content. To style this custom part, we’ll need to extend our accordion recipe.
 
 **Extending the Accordion Anatomy for Custom Parts**
 
 Panda CSS's recipe system is quite flexible. While **`accordionAnatomy.keys()`** gives us all the standard parts exposed
 by Codesign UI, we can easily add our own by introducing a custom slot named **`itemBody`**.
 
-This explicitly tells Panda CSS to expect and generate styles for this new part, even though it's not part of Codesign UI's
-default structure.
+This explicitly tells Panda CSS to expect and generate styles for this new part, even though it's not part of Codesign
+UI's default structure.
 
 Add **`'itemBody'`** to the array of slots when defining our **`accordionRecipe`**:
 
@@ -1196,13 +1197,14 @@ the [**Storybook examples**](https://github.com/estheragbaje/codesign-react-pan
 
 ## Conclusion
 
-You’ve just built a fully custom-styled Accordion component using Codesign UI, with support for Vanilla CSS or Panda CSS.
+You’ve just built a fully custom-styled Accordion component using Codesign UI, with support for Vanilla CSS or Panda
+CSS.
 
 We walked through the base styles, size and visual variants, and added a custom part (`item-body`) to give you more
 layout control.
 
-A headless library like Codesign UI means that whichever style pattern you decide to use, you're in control of your design
-system and can scale as your team grows. and keep things clean.
+A headless library like Codesign UI means that whichever style pattern you decide to use, you're in control of your
+design system and can scale as your team grows. and keep things clean.
 
 Feel free to explore the [GitHub repo](https://github.com/estheragbaje/codesign-react-panda-css) or
 [Storybook examples](https://github.com/estheragbaje/codesign-react-panda-css/tree/main/src/stories/accordion).

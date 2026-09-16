@@ -40,5 +40,6 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title: 'Codesign Plus',
-  description: 'Level up your design system with Codesign Plus. Accelerate your usage of Codesign UI with exclusive examples.',
+  description:
+    'Level up your design system with Codesign Plus. Accelerate your usage of Codesign UI with exclusive examples.',
 }

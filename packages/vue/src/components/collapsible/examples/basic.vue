@@ -14,8 +14,8 @@ import styles from 'styles/collapsible.module.css'
     </Collapsible.Trigger>
     <Collapsible.Content :class="styles.Content">
       <div :class="styles.Body">
-        Codesign UI is a headless component library for building accessible, high-quality UI components for React, Solid,
-        Vue, and Svelte.
+        Codesign UI is a headless component library for building accessible, high-quality UI components for React,
+        Solid, Vue, and Svelte.
       </div>
     </Collapsible.Content>
   </Collapsible.Root>

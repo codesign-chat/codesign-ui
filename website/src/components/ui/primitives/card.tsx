@@ -20,8 +20,17 @@ export const Description = withContext<HTMLDivElement, Assign<HTMLStyledProps<'d
   'description',
 )
 
-export const Footer = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(codesign.div, 'footer')
+export const Footer = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(
+  codesign.div,
+  'footer',
+)
 
-export const Header = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(codesign.div, 'header')
+export const Header = withContext<HTMLDivElement, Assign<HTMLStyledProps<'div'>, PolymorphicProps>>(
+  codesign.div,
+  'header',
+)
 
-export const Title = withContext<HTMLHeadingElement, Assign<HTMLStyledProps<'h3'>, HTMLArkProps<'h3'>>>(codesign.h3, 'title')
+export const Title = withContext<HTMLHeadingElement, Assign<HTMLStyledProps<'h3'>, HTMLArkProps<'h3'>>>(
+  codesign.h3,
+  'title',
+)

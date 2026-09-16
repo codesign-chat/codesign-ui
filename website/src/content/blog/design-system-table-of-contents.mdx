@@ -203,7 +203,8 @@ feels connected to the reader's scroll position.
 
 ## Support nested headings
 
-Codesign UI gives each item a `depth`, but it does not impose a visual hierarchy. Add indentation when rendering the item:
+Codesign UI gives each item a `depth`, but it does not impose a visual hierarchy. Add indentation when rendering the
+item:
 
 ```tsx
 <Toc.Item item={item} style={{ '--toc-depth': Math.max(0, item.depth - 2) } as React.CSSProperties}>
@@ -219,8 +220,8 @@ Then consume the custom property in CSS:
 }
 ```
 
-For deeply nested documents, combine the Table of Contents with Codesign UI's Tree View. The TOC can continue tracking the
-visible headings while the tree manages disclosure and hierarchical keyboard navigation.
+For deeply nested documents, combine the Table of Contents with Codesign UI's Tree View. The TOC can continue tracking
+the visible headings while the tree manages disclosure and hierarchical keyboard navigation.
 
 ## Add a compact variant
 
@@ -367,8 +368,8 @@ As you adapt the component, keep these details in mind:
 
 ## Putting it all together
 
-The Table of Contents component separates behavior from presentation: Codesign UI observes the document and exposes active
-state, while your design system controls layout, hierarchy, color, motion, and responsive behavior.
+The Table of Contents component separates behavior from presentation: Codesign UI observes the document and exposes
+active state, while your design system controls layout, hierarchy, color, motion, and responsive behavior.
 
 Start with the basic sidebar, then add an indicator, nested spacing, responsive disclosure, or Tree View only when your
 content needs it. Explore the live examples and complete API in the

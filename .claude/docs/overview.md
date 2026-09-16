@@ -1,7 +1,7 @@
 # Codesign UI - Project Overview
 
-Codesign UI is a headless component library for building scalable Design Systems across React, Solid, Svelte, and Vue. Built
-on top of Zag.js state machines, it provides unstyled, accessible UI components.
+Codesign UI is a headless component library for building scalable Design Systems across React, Solid, Svelte, and Vue.
+Built on top of Zag.js state machines, it provides unstyled, accessible UI components.
 
 ## Project Structure
 

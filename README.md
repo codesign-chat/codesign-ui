@@ -29,8 +29,7 @@ Codesign UI is a headless component library that provides the foundation for bui
 systems and web applications. Built on top of [Zag.js](https://zagjs.com) state machines, Codesign UI delivers robust,
 framework-agnostic component logic with perfect parity across **React**, **Solid**, **Vue**, and **Svelte**.
 
-> Codesign UI is a fork of [Ark UI](https://github.com/chakra-ui/ark). See
-> [Credits](#credits) for details.
+> Codesign UI is a fork of [Ark UI](https://github.com/chakra-ui/ark). See [Credits](#credits) for details.
 
 ### Why Codesign UI?
 
@@ -328,8 +327,8 @@ belongs to the upstream project and its contributors.
 
 ## License
 
-MIT © [Chakra Systems Inc.](https://github.com/chakra-ui) and codesign-chat contributors. See
-[LICENSE](LICENSE) for details.
+MIT © [Chakra Systems Inc.](https://github.com/chakra-ui) and codesign-chat contributors. See [LICENSE](LICENSE) for
+details.
 
 ---
 

@@ -7,8 +7,8 @@ author: 'Sage'
 tags: ['storybook', 'react', 'developer-experience']
 ---
 
-Storybook is a great way to develop and document your design system in isolation. Codesign UI works well with it — you just
-need to know how the pieces fit together. Here's a walkthrough of setting up Storybook with Codesign UI React.
+Storybook is a great way to develop and document your design system in isolation. Codesign UI works well with it — you
+just need to know how the pieces fit together. Here's a walkthrough of setting up Storybook with Codesign UI React.
 
 ## Installation
 
@@ -23,8 +23,8 @@ This sets up Storybook with `@storybook/react-vite` and creates a `.storybook` d
 
 ## Writing Stories
 
-Codesign UI uses compound components — `Checkbox.Root`, `Checkbox.Control`, `Checkbox.Label`, etc. Each story composes these
-parts together, just like you would in your app:
+Codesign UI uses compound components — `Checkbox.Root`, `Checkbox.Control`, `Checkbox.Label`, etc. Each story composes
+these parts together, just like you would in your app:
 
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react-vite'
@@ -111,8 +111,8 @@ No need to wire up JavaScript for visual states.
 
 ## Prop Documentation with Controls
 
-By default, Storybook won't pick up Codesign UI's component props. This is because the props flow through `@zag-js` types in
-`node_modules`, and Storybook's docgen filters those out. To fix this, you need three things.
+By default, Storybook won't pick up Codesign UI's component props. This is because the props flow through `@zag-js`
+types in `node_modules`, and Storybook's docgen filters those out. To fix this, you need three things.
 
 ### 1. Enable react-docgen-typescript
 
@@ -173,6 +173,6 @@ and everything else — with descriptions and types.
 
 ## Wrapping Up
 
-Codesign UI's compound component pattern maps naturally to Storybook stories. Write your stories the same way you'd use the
-components in your app, add CSS modules for styling, and enable docgen if you want prop documentation. That's all there
-is to it.
+Codesign UI's compound component pattern maps naturally to Storybook stories. Write your stories the same way you'd use
+the components in your app, add CSS modules for styling, and enable docgen if you want prop documentation. That's all
+there is to it.

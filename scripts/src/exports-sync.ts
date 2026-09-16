@@ -7,7 +7,7 @@ const main = async () => {
 
   files
     .filter((file) => !['presence', 'portal', 'highlight', 'frame', 'client-only'].includes(basename(dirname(file))))
-    .map((file) => {
+    .forEach((file) => {
       try {
         // eg. copy `react/src/avatar/index.ts` to `solid/src/avatar/index.ts`
         copyFileSync(file, file.replace('react', 'solid').replace('.ts', '.tsx'))

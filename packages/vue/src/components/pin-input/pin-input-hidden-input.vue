@@ -27,7 +27,11 @@ useForwardExpose()
 </script>
 
 <template>
-  <codesign.input :aria-describedby="field?.ariaDescribedby" v-bind="pinInput.getHiddenInputProps()" :as-child="asChild">
+  <codesign.input
+    :aria-describedby="field?.ariaDescribedby"
+    v-bind="pinInput.getHiddenInputProps()"
+    :as-child="asChild"
+  >
     <slot />
   </codesign.input>
 </template>

@@ -13,7 +13,9 @@ export const SignaturePadSegment = (props: SignaturePadSegmentProps) => {
   return (
     <codesign.svg {...mergedProps}>
       <codesign.title>Signature</codesign.title>
-      <For each={signaturePad().paths}>{(path) => <codesign.path {...signaturePad().getSegmentPathProps({ path })} />}</For>
+      <For each={signaturePad().paths}>
+        {(path) => <codesign.path {...signaturePad().getSegmentPathProps({ path })} />}
+      </For>
       <Show when={signaturePad().currentPath}>
         {/* @ts-expect-error */}
         <codesign.path {...signaturePad().getSegmentPathProps({ path: signaturePad().currentPath })} />

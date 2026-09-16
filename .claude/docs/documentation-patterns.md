@@ -141,7 +141,8 @@ Use the `--height` CSS variable to animate content:
 
 Here's an example using `next/image`:
 
-\`\`\`tsx import { Component } from '@codesign-ui/react/component' import { getImageProps } from 'next/image' // ... \`\`\`
+\`\`\`tsx import { Component } from '@codesign-ui/react/component' import { getImageProps } from 'next/image' // ...
+\`\`\`
 ```
 
 ### Router Integration

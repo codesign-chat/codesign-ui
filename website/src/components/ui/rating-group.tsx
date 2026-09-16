@@ -14,7 +14,9 @@ export const RatingGroup = forwardRef<HTMLDivElement, RatingGroupProps>((props, 
           {({ items }) =>
             items.map((index) => (
               <CodesignRatingGroup.Item key={index} index={index}>
-                <CodesignRatingGroup.ItemContext>{(item) => <StarIcon isHalf={item.half} />}</CodesignRatingGroup.ItemContext>
+                <CodesignRatingGroup.ItemContext>
+                  {(item) => <StarIcon isHalf={item.half} />}
+                </CodesignRatingGroup.ItemContext>
               </CodesignRatingGroup.Item>
             ))
           }
