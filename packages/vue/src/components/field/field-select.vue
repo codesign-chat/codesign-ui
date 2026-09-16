@@ -1,0 +1,39 @@
+<script lang="ts">
+import type { SelectHTMLAttributes } from 'vue'
+import type { PolymorphicProps } from '../factory.ts'
+
+export interface FieldSelectBaseProps extends PolymorphicProps {}
+export interface FieldSelectProps
+  extends
+    FieldSelectBaseProps,
+    /**
+     * @vue-ignore
+     */
+    Omit<SelectHTMLAttributes, 'value'> {
+  modelValue?: SelectHTMLAttributes['value']
+}
+</script>
+
+<script setup lang="ts">
+import { codesign } from '../factory.ts'
+import { useFieldContext } from './use-field-context.ts'
+import { useForwardExpose } from '../../utils/use-forward-expose.ts'
+
+defineProps<FieldSelectProps & { modelValue?: string }>()
+const field = useFieldContext()
+
+const emit = defineEmits(['update:modelValue'])
+
+useForwardExpose()
+</script>
+
+<template>
+  <codesign.select
+    v-bind="field?.getSelectProps()"
+    :value="modelValue"
+    @change="(event) => emit('update:modelValue', (event.target as HTMLSelectElement).value)"
+    :as-child="asChild"
+  >
+    <slot />
+  </codesign.select>
+</template>

@@ -1,0 +1,18 @@
+'use client'
+
+import { mergeProps } from '@zag-js/react'
+import { forwardRef } from 'react'
+import { type HTMLProps, type PolymorphicProps, codesign } from '../factory.ts'
+import { usePopoverContext } from './use-popover-context.ts'
+
+export interface PopoverTitleBaseProps extends PolymorphicProps {}
+export interface PopoverTitleProps extends HTMLProps<'div'>, PopoverTitleBaseProps {}
+
+export const PopoverTitle = forwardRef<HTMLDivElement, PopoverTitleProps>((props, ref) => {
+  const popover = usePopoverContext()
+  const mergedProps = mergeProps(popover.getTitleProps(), props)
+
+  return <codesign.div {...mergedProps} ref={ref} />
+})
+
+PopoverTitle.displayName = 'PopoverTitle'

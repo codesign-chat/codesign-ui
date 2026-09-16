@@ -1,0 +1,18 @@
+<script module lang="ts">
+  import type { Assign, HTMLProps, PolymorphicProps, RefAttribute } from '$lib/types'
+
+  export interface PaginationNextTriggerBaseProps extends PolymorphicProps<'button'>, RefAttribute {}
+  export interface PaginationNextTriggerProps extends Assign<HTMLProps<'button'>, PaginationNextTriggerBaseProps> {}
+</script>
+
+<script lang="ts">
+  import { mergeProps } from '@zag-js/svelte'
+  import { Codesign } from '../factory/index.ts'
+  import { usePaginationContext } from './use-pagination-context.ts'
+
+  let { ref = $bindable(null), ...props }: PaginationNextTriggerProps = $props()
+  const pagination = usePaginationContext()
+  const mergedProps = $derived(mergeProps(pagination().getNextTriggerProps(), props))
+</script>
+
+<Codesign as="button" bind:ref {...mergedProps} />

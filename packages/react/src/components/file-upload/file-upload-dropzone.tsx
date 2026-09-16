@@ -1,0 +1,23 @@
+'use client'
+
+import type { DropzoneProps } from '@zag-js/file-upload'
+import { mergeProps } from '@zag-js/react'
+import { forwardRef } from 'react'
+import { createSplitProps } from '../../utils/create-split-props.ts'
+import { type HTMLProps, type PolymorphicProps, codesign } from '../factory.ts'
+import { useFileUploadContext } from './use-file-upload-context.ts'
+
+export interface FileUploadDropzoneBaseProps extends PolymorphicProps, DropzoneProps {}
+export interface FileUploadDropzoneProps extends HTMLProps<'div'>, FileUploadDropzoneBaseProps {}
+
+const splitDropzoneProps = createSplitProps<DropzoneProps>()
+
+export const FileUploadDropzone = forwardRef<HTMLDivElement, FileUploadDropzoneProps>((props, ref) => {
+  const [dropzoneProps, localProps] = splitDropzoneProps(props, ['disableClick'])
+  const fileUpload = useFileUploadContext()
+  const mergedProps = mergeProps(fileUpload.getDropzoneProps(dropzoneProps), localProps)
+
+  return <codesign.div {...mergedProps} ref={ref} />
+})
+
+FileUploadDropzone.displayName = 'FileUploadDropzone'

@@ -1,0 +1,13 @@
+import { mergeProps } from '@zag-js/solid'
+import { type HTMLProps, type PolymorphicProps, codesign } from '../factory.tsx'
+import { usePaginationContext } from './use-pagination-context.ts'
+
+export interface PaginationFirstTriggerBaseProps extends PolymorphicProps<'button'> {}
+export interface PaginationFirstTriggerProps extends HTMLProps<'button'>, PaginationFirstTriggerBaseProps {}
+
+export const PaginationFirstTrigger = (props: PaginationFirstTriggerProps) => {
+  const api = usePaginationContext()
+  const mergedProps = mergeProps(() => api().getFirstTriggerProps(), props)
+
+  return <codesign.button {...mergedProps} />
+}

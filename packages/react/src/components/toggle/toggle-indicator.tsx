@@ -1,0 +1,29 @@
+'use client'
+
+import { mergeProps } from '@zag-js/react'
+import { forwardRef } from 'react'
+import type { HTMLArkProps } from '../factory.ts'
+import { codesign } from '../factory.ts'
+import { useToggleContext } from './use-toggle-context.ts'
+
+export interface ToggleIndicatorBaseProps {
+  /**
+   * The fallback content to render when the toggle is not pressed.
+   */
+  fallback?: React.ReactNode | undefined
+}
+
+export interface ToggleIndicatorProps extends HTMLArkProps<'div'>, ToggleIndicatorBaseProps {}
+
+export const ToggleIndicator = forwardRef<HTMLDivElement, ToggleIndicatorProps>((props, ref) => {
+  const { children, fallback, ...restProps } = props
+  const toggle = useToggleContext()
+  const mergedProps = mergeProps(toggle.getIndicatorProps(), restProps)
+  return (
+    <codesign.div {...mergedProps} ref={ref}>
+      {toggle.pressed ? children : fallback}
+    </codesign.div>
+  )
+})
+
+ToggleIndicator.displayName = 'ToggleIndicator'

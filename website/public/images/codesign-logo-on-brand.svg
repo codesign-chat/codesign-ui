@@ -1,0 +1,5 @@
+<svg width="480" height="120" viewBox="0 0 480 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="20" width="80" height="80" rx="20" fill="#ffffff" fill-opacity="0.14"/>
+  <path d="M45 47.5C45 40.595 50.595 35 57.5 35H72V44H57.5C55.567 44 54 45.567 54 47.5V72.5C54 74.433 55.567 76 57.5 76H72V85H57.5C50.595 85 45 79.405 45 72.5V47.5Z" fill="#ffffff"/>
+  <text x="112" y="72" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="44" font-weight="700" letter-spacing="-1.5" fill="#ffffff">codesign-ui</text>
+</svg>

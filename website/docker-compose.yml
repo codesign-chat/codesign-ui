@@ -1,0 +1,17 @@
+services:
+  db:
+    container_name: codesign-plus-db
+    image: postgres:18-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      PGDATA: /data/postgres
+    volumes:
+      - codesign-plus-db:/data/postgres
+
+volumes:
+  codesign-plus-db:
+    driver: local

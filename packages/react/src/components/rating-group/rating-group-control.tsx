@@ -1,0 +1,18 @@
+'use client'
+
+import { mergeProps } from '@zag-js/react'
+import { forwardRef } from 'react'
+import { type HTMLProps, type PolymorphicProps, codesign } from '../factory.ts'
+import { useRatingGroupContext } from './use-rating-group-context.ts'
+
+export interface RatingGroupControlBaseProps extends PolymorphicProps {}
+export interface RatingGroupControlProps extends HTMLProps<'div'>, RatingGroupControlBaseProps {}
+
+export const RatingGroupControl = forwardRef<HTMLDivElement, RatingGroupControlProps>((props, ref) => {
+  const ratingGroup = useRatingGroupContext()
+  const mergedProps = mergeProps(ratingGroup.getControlProps(), props)
+
+  return <codesign.div {...mergedProps} ref={ref} />
+})
+
+RatingGroupControl.displayName = 'RatingGroupControl'

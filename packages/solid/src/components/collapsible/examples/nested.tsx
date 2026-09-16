@@ -1,0 +1,48 @@
+import { Collapsible } from '@codesign-ui/solid/collapsible'
+import { ChevronRightIcon } from 'lucide-solid'
+import styles from 'styles/collapsible.module.css'
+
+export const Nested = () => (
+  <Collapsible.Root class={styles.Root}>
+    <Collapsible.Trigger class={styles.Trigger}>
+      Getting Started
+      <Collapsible.Indicator class={styles.Indicator}>
+        <ChevronRightIcon />
+      </Collapsible.Indicator>
+    </Collapsible.Trigger>
+    <Collapsible.Content class={styles.Content}>
+      <div class={styles.Body}>
+        <p>Welcome to the Codesign UI documentation. Here are some topics to explore:</p>
+
+        <Collapsible.Root class={styles.Nested}>
+          <Collapsible.Trigger class={styles.Trigger}>
+            Installation
+            <Collapsible.Indicator class={styles.Indicator}>
+              <ChevronRightIcon />
+            </Collapsible.Indicator>
+          </Collapsible.Trigger>
+          <Collapsible.Content class={styles.Content}>
+            <div class={styles.Body}>
+              <p>Install Codesign UI using your preferred package manager:</p>
+              <code>npm install @codesign-ui/solid</code>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
+
+        <Collapsible.Root class={styles.Nested}>
+          <Collapsible.Trigger class={styles.Trigger}>
+            Styling
+            <Collapsible.Indicator class={styles.Indicator}>
+              <ChevronRightIcon />
+            </Collapsible.Indicator>
+          </Collapsible.Trigger>
+          <Collapsible.Content class={styles.Content}>
+            <div class={styles.Body}>
+              <p>Codesign UI components are unstyled by default. Use CSS modules, Tailwind, or any styling solution.</p>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
+      </div>
+    </Collapsible.Content>
+  </Collapsible.Root>
+)

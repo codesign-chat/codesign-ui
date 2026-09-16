@@ -1,0 +1,18 @@
+<script module lang="ts">
+  import type { Assign, HTMLProps, PolymorphicProps, RefAttribute } from '$lib/types'
+
+  export interface PinInputControlBaseProps extends PolymorphicProps<'div'>, RefAttribute {}
+  export interface PinInputControlProps extends Assign<HTMLProps<'div'>, PinInputControlBaseProps> {}
+</script>
+
+<script lang="ts">
+  import { mergeProps } from '@zag-js/svelte'
+  import { Codesign } from '../factory/index.ts'
+  import { usePinInputContext } from './use-pin-input-context.ts'
+
+  let { ref = $bindable(null), ...props }: PinInputControlProps = $props()
+  const pinInput = usePinInputContext()
+  const mergedProps = $derived(mergeProps(pinInput().getControlProps(), props))
+</script>
+
+<Codesign as="div" bind:ref {...mergedProps} />

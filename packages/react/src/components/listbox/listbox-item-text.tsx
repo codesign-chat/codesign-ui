@@ -1,0 +1,20 @@
+'use client'
+
+import { mergeProps } from '@zag-js/react'
+import { forwardRef } from 'react'
+import { type HTMLProps, type PolymorphicProps, codesign } from '../factory.ts'
+import { useListboxContext } from './use-listbox-context.ts'
+import { useListboxItemPropsContext } from './use-listbox-item-props-context.ts'
+
+export interface ListboxItemTextBaseProps extends PolymorphicProps {}
+export interface ListboxItemTextProps extends HTMLProps<'div'>, ListboxItemTextBaseProps {}
+
+export const ListboxItemText = forwardRef<HTMLDivElement, ListboxItemTextProps>((props, ref) => {
+  const listbox = useListboxContext()
+  const itemProps = useListboxItemPropsContext()
+  const mergedProps = mergeProps(listbox.getItemTextProps(itemProps), props)
+
+  return <codesign.div {...mergedProps} ref={ref} />
+})
+
+ListboxItemText.displayName = 'ListboxItemText'
