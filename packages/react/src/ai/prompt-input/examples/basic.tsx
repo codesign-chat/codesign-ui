@@ -19,6 +19,7 @@ import {
   Attachments,
 } from '../../attachments/index.ts'
 import { PlusIcon, SendIcon, XIcon } from 'lucide-react'
+import menu from 'styles/menu.module.css'
 import styles from 'styles/ai.module.css'
 
 function AttachedFiles() {
@@ -57,8 +58,8 @@ export function Basic() {
               <PromptInputActionMenuTrigger aria-label="Add content">
                 <PlusIcon size={16} />
               </PromptInputActionMenuTrigger>
-              <PromptInputActionMenuContent>
-                <PromptInputActionAddAttachments />
+              <PromptInputActionMenuContent className={menu.Content}>
+                <PromptInputActionAddAttachments className={menu.Item} />
               </PromptInputActionMenuContent>
             </PromptInputActionMenu>
           </PromptInputTools>

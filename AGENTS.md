@@ -92,6 +92,29 @@ The library ships in three layers. Keep the boundaries strict:
   plain React components, not Zag.js machines.
 - Styling contract: every rendered element carries `data-scope="<family>"` and `data-part="<part>"`.
   Never ship default colors, spacing, or CSS classes; always forward `className` and spread `props`.
+- When a composite proxies a primitive through `asChild` (e.g. a button inside `Menu.Trigger`),
+  the final DOM carries the outermost primitive's data attributes — the composite's own
+  `data-scope`/`data-part` are overridden by the spread. Themes must target the proxied scope
+  (e.g. `[data-scope='menu'][data-part='trigger']`), ideally scoped under the composite root.
+- Storybook reference styles follow the Style Reuse rules below.
+
+### Style Reuse
+
+This repository ships unstyled components — all styling lives in themes. The Style Reuse rule
+applies to the Storybook reference styles only: when writing new styles under
+`.storybook/modules/`, first study the existing ones. Reuse existing styles directly wherever
+possible; even when nothing is directly reusable, always follow the established conventions
+instead of inventing new ones:
+
+- The shared `--demo-*` token vocabulary from `.storybook/modules/theme.css` (coral accent, neutral
+  scale, border tiers, popover background), which keeps light and dark mode working automatically
+- The interaction conventions of the modules pool: hover/expanded states, the coral focus ring,
+  the disabled treatment (`opacity: 0.5` + grayscale), and the 150ms transitions
+- The rem-based radius and shadow scales, and the shared button metrics (min-height, icon-only
+  padding, `svg { width: 1em }`)
+
+Never invent a parallel palette or hardcode colors. Themes are intentionally exempt from this
+rule: each theme defines its own vocabulary — that freedom is the point of the themes layer.
 - Import Layer 1 only through its public surface (`@codesign-ui/react/<component>` or the relative
   component `index.ts`). Never reach into machine/anatomy internals.
 - Icons are caller-supplied (via `children` or fallback props). The package ships no icon dependency.

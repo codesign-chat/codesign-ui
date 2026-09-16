@@ -1,4 +1,4 @@
-import { CopyIcon, RefreshCwIcon } from 'lucide-react'
+import { ChevronLeftIcon, ChevronRightIcon, CopyIcon, RefreshCwIcon } from 'lucide-react'
 import { Message } from '../message.tsx'
 import { MessageAction } from '../message.tsx'
 import { MessageActions } from '../message.tsx'
@@ -58,9 +58,13 @@ export function Branches() {
             <MessageContent>Third draft — notice the page counter updates.</MessageContent>
           </MessageBranchContent>
           <MessageBranchSelector>
-            <MessageBranchPrevious />
+            <MessageBranchPrevious>
+              <ChevronLeftIcon size={14} />
+            </MessageBranchPrevious>
             <MessageBranchPage />
-            <MessageBranchNext />
+            <MessageBranchNext>
+              <ChevronRightIcon size={14} />
+            </MessageBranchNext>
           </MessageBranchSelector>
         </MessageBranch>
       </Message>

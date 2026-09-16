@@ -40,6 +40,7 @@ import {
 } from '../../index.ts'
 import type { PromptInputMessage } from '../../index.ts'
 import { PromptInputProvider } from '../../index.ts'
+import menu from 'styles/menu.module.css'
 import styles from 'styles/ai.module.css'
 
 type ChatMessage = { id: string; from: 'user' | 'assistant'; text: string }
@@ -183,8 +184,8 @@ function ChatInner() {
               <PromptInputActionMenuTrigger aria-label="Add content">
                 <PlusIcon size={16} />
               </PromptInputActionMenuTrigger>
-              <PromptInputActionMenuContent>
-                <PromptInputActionAddAttachments />
+              <PromptInputActionMenuContent className={menu.Content}>
+                <PromptInputActionAddAttachments className={menu.Item} />
               </PromptInputActionMenuContent>
             </PromptInputActionMenu>
             <PromptInputButton aria-label="Attach from picker">
