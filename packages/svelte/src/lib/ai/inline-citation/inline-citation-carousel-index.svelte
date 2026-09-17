@@ -1,7 +1,7 @@
 <script lang="ts">
   import { CarouselProgressText } from '../../components/carousel/index.ts'
 
-  interface InlineCitationCarouselIndexProps {}
+  type InlineCitationCarouselIndexProps = {}
 
   let { ...rest }: InlineCitationCarouselIndexProps = $props()
 </script>

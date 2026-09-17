@@ -221,7 +221,8 @@
     "@zag-js/tour": "1.44.0",
     "@zag-js/tree-view": "1.44.0",
     "@zag-js/types": "1.44.0",
-    "@zag-js/utils": "1.44.0"
+    "@zag-js/utils": "1.44.0",
+    "shiki": "3.22.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "10.6.0",

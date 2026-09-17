@@ -232,6 +232,7 @@
         "@zag-js/tree-view": "1.44.0",
         "@zag-js/types": "1.44.0",
         "@zag-js/utils": "1.44.0",
+        "shiki": "3.22.0",
       },
       "devDependencies": {
         "@biomejs/biome": "2.5.13",
@@ -341,6 +342,7 @@
         "@zag-js/tree-view": "1.44.0",
         "@zag-js/types": "1.44.0",
         "@zag-js/utils": "1.44.0",
+        "shiki": "3.22.0",
       },
       "devDependencies": {
         "@storybook/addon-a11y": "10.6.0",
@@ -448,6 +450,7 @@
         "@zag-js/types": "1.44.0",
         "@zag-js/utils": "1.44.0",
         "@zag-js/vue": "1.44.0",
+        "shiki": "3.22.0",
       },
       "devDependencies": {
         "@biomejs/biome": "2.5.13",
