@@ -67,7 +67,7 @@ export const SchemaDisplayHeader = defineComponent({
 
 export const SchemaDisplayMethod = defineComponent({
   name: 'SchemaDisplayMethod',
-  setup(_, { attrs }) {
+  setup(_, { attrs, slots }) {
     const { method } = useSchemaDisplay()
     return () =>
       h(
@@ -98,7 +98,7 @@ export const SchemaDisplayPath = defineComponent({
 
 export const SchemaDisplayDescription = defineComponent({
   name: 'SchemaDisplayDescription',
-  setup(_, { attrs, slots }) {
+  setup(_, { attrs }) {
     const { description } = useSchemaDisplay()
     return () =>
       description ? h('p', { ...attrs, 'data-scope': SCOPE, 'data-part': 'description' }, description) : null
