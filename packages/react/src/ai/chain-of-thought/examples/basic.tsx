@@ -1,5 +1,5 @@
 import 'styles/ai.module.css'
-import { FilePlus2Icon } from 'lucide-react'
+import { ChevronDownIcon, CircleDashedIcon, FilePlus2Icon, LoaderCircleIcon } from 'lucide-react'
 import {
   ChainOfThought,
   ChainOfThoughtContent,
@@ -13,11 +13,12 @@ import {
 export function Basic() {
   return (
     <ChainOfThought defaultOpen>
-      <ChainOfThoughtHeader />
+      <ChainOfThoughtHeader indicator={<ChevronDownIcon />} />
       <ChainOfThoughtContent>
         <ChainOfThoughtStep icon={<FilePlus2Icon />} label="Upload document" status="complete" />
         <ChainOfThoughtStep
           description="Matched the query against the components index"
+          icon={<LoaderCircleIcon />}
           label="Search internal knowledge"
           status="active"
         >
@@ -26,7 +27,7 @@ export function Basic() {
             <ChainOfThoughtSearchResult>conversation.stories.tsx</ChainOfThoughtSearchResult>
           </ChainOfThoughtSearchResults>
         </ChainOfThoughtStep>
-        <ChainOfThoughtStep label="Draft response" status="pending" />
+        <ChainOfThoughtStep icon={<CircleDashedIcon />} label="Draft response" status="pending" />
         <ChainOfThoughtImage caption="Reference architecture diagram">
           <svg aria-hidden="true" height="96" viewBox="0 0 200 96" width="200">
             <rect fill="none" height="94" stroke="#eb5e41" width="198" x="1" y="1" />

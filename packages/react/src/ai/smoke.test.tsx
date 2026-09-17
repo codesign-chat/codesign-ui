@@ -2,15 +2,21 @@ import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import * as attachments from './attachments/examples/attachments-examples.tsx'
 import * as chainOfThought from './chain-of-thought/examples/basic.tsx'
+import * as checkpoint from './checkpoint/examples/basic.tsx'
 import * as codeBlock from './code-block/examples/basic.tsx'
 import * as commit from './commit/examples/basic.tsx'
 import * as confirmation from './confirmation/examples/basic.tsx'
 import * as chat from './conversation/examples/chat.tsx'
 import * as conversation from './conversation/examples/basic.tsx'
+import * as context from './context/examples/basic.tsx'
 import * as environmentVariables from './environment-variables/examples/basic.tsx'
 import * as inlineCitation from './inline-citation/examples/basic.tsx'
 import * as message from './message/examples/message-examples.tsx'
+import * as modelSelector from './model-selector/examples/basic.tsx'
+import * as plan from './plan/examples/basic.tsx'
 import * as promptInput from './prompt-input/examples/basic.tsx'
+import * as queue from './queue/examples/basic.tsx'
+import * as question from './question/examples/basic.tsx'
 import * as reasoning from './reasoning/examples/basic.tsx'
 import * as shimmerModule from './shimmer/shimmer.tsx'
 import * as snippet from './snippet/examples/basic.tsx'
@@ -25,14 +31,20 @@ const MODULES = {
   attachments,
   chainOfThought,
   chat,
+  checkpoint,
   codeBlock,
   commit,
   confirmation,
   conversation,
+  context,
   environmentVariables,
   inlineCitation,
   message,
+  modelSelector,
+  plan,
   promptInput,
+  queue,
+  question,
   reasoning,
   snippet,
   sources,

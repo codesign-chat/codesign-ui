@@ -5,54 +5,6 @@ import { useControllableState } from '../use-controllable-state.ts'
 
 const SCOPE = 'chain-of-thought'
 
-const CheckIcon = () => (
-  <svg
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <path d="M20 6 9 17l-5-5" />
-  </svg>
-)
-
-const LoaderIcon = () => (
-  <svg aria-hidden="true" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2" viewBox="0 0 24 24">
-    <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-  </svg>
-)
-
-const PendingIcon = () => (
-  <svg
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    strokeLinecap="round"
-    strokeDasharray="4 3"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <circle cx="12" cy="12" r="9" />
-  </svg>
-)
-
-const ChevronDownIcon = () => (
-  <svg
-    aria-hidden="true"
-    fill="none"
-    stroke="currentColor"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <path d="m6 9 6 6 6-6" />
-  </svg>
-)
-
 interface ChainOfThoughtContextValue {
   isOpen: boolean
   setIsOpen: (open: boolean) => void
@@ -92,16 +44,18 @@ export function ChainOfThought({ open, defaultOpen = false, onOpenChange, childr
   )
 }
 
-export type ChainOfThoughtHeaderProps = ComponentProps<'button'>
+export type ChainOfThoughtHeaderProps = ComponentProps<'button'> & {
+  indicator?: ReactNode
+}
 
-export function ChainOfThoughtHeader({ children, ...props }: ChainOfThoughtHeaderProps) {
+export function ChainOfThoughtHeader({ children, indicator, ...props }: ChainOfThoughtHeaderProps) {
   const { isOpen, setIsOpen } = useChainOfThought()
 
   return (
     <Collapsible.Root onOpenChange={(details) => setIsOpen(details.open)} open={isOpen}>
       <Collapsible.Trigger data-scope={SCOPE} data-part="trigger" {...props}>
         {children ?? 'Chain of Thought'}
-        <ChevronDownIcon />
+        {indicator}
       </Collapsible.Trigger>
     </Collapsible.Root>
   )
@@ -125,7 +79,7 @@ export function ChainOfThoughtStep({
   return (
     <div data-scope={SCOPE} data-part="step" data-status={status} {...props}>
       <div data-scope={SCOPE} data-part="step-marker">
-        {icon ?? (status === 'complete' ? <CheckIcon /> : status === 'active' ? <LoaderIcon /> : <PendingIcon />)}
+        {icon}
       </div>
       <div data-scope={SCOPE} data-part="step-body">
         <div data-scope={SCOPE} data-part="step-label">
