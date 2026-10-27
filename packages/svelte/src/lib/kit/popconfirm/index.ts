@@ -1,0 +1,6 @@
+export { default as Popconfirm } from './popconfirm.svelte'
+export { default as PopconfirmTrigger } from './popconfirm-trigger.svelte'
+export { default as PopconfirmContent } from './popconfirm-content.svelte'
+export { default as PopconfirmTitle } from './popconfirm-title.svelte'
+export { default as PopconfirmDescription } from './popconfirm-description.svelte'
+export { default as PopconfirmActions } from './popconfirm-actions.svelte'

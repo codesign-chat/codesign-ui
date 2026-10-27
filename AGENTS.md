@@ -60,13 +60,15 @@ The project includes Claude Code slash commands in `.claude/commands/`:
 ```
 codesign-ui/
 ├── packages/
-│   ├── react/             # React bindings (headless core + AI composites)
+│   ├── react/             # React bindings (headless core + AI composites + screen kit)
 │   │   └── src/
 │   │       ├── components/    # Layer 1: headless primitives (Zag.js machines) — synced with upstream
-│   │       └── ai/            # Layer 2: unstyled composites — owned by this fork
-│   ├── solid/             # SolidJS bindings (Layer 1)
-│   ├── svelte/            # Svelte bindings (Layer 1)
-│   ├── vue/               # Vue bindings (Layer 1)
+│   │       ├── ai/            # Layer 2: unstyled composites — owned by this fork
+│   │       ├── kit/           # Screen kit (React binding; paired catalog inventory)
+│   │       └── ...            # solid/vue use src/kit, svelte uses src/lib/kit
+│   ├── solid/             # SolidJS bindings (Layer 1 + screen kit)
+│   ├── svelte/            # Svelte bindings (Layer 1 + screen kit)
+│   ├── vue/               # Vue bindings (Layer 1 + screen kit)
 │   ├── mcp/               # MCP server
 │   └── themes/            # Themes (data only, planned)
 ├── website/               # Documentation site
@@ -76,13 +78,18 @@ codesign-ui/
 
 ## Architecture Principles
 
-The library ships in three layers. Keep the boundaries strict:
+The library ships in three shared layers plus the screen kit (present in every framework). Keep the boundaries strict:
 
 1. **Layer 1 — headless primitives** (`packages/*/src/components`): one Zag.js machine per
    component. Behavior + ARIA only. Zero styling. Kept in sync with upstream Ark.
 2. **Layer 2 — unstyled composites** (`packages/react/src/ai`): multi-primitive components for a
    product domain (chat, and similar). Still zero styling; they compose Layer 1 and add behavior.
-3. **Layer 3 — themes** (`packages/themes`): data, not code. Each theme maps semantic tokens to
+3. **Screen kit — `packages/react/src/kit`, `packages/solid/src/kit`, `packages/vue/src/kit`,
+   `packages/svelte/src/lib/kit`**: product-level families the headless primitives do not own (Button, Card, KPI,
+   Breadcrumb, Table, Alert, …). Headless (`data-scope`/`data-part`, no styling), with a binding in every framework;
+   it is the inventory the Penpot paired catalog maps 1:1. `check:exports` compares the React/Solid/Vue kit
+   indexes; `check:anatomy` still covers `src/components` only (the kit has no Zag anatomy files).
+4. **Layer 3 — themes** (`packages/themes`): data, not code. Each theme maps semantic tokens to
    primitive tokens (light + dark). Components never hardcode colors; they expose
    `data-scope`/`data-part` hooks for styling.
 

@@ -46,6 +46,7 @@ export function parseAnsi(output: string): AnsiSegment[] {
     push(output.slice(last, match.index))
     last = match.index + match[0].length
     match = re.exec(output)
+    if (match === null) break
 
     const params = match[1].split(';').map((p) => (p === '' ? 0 : Number.parseInt(p, 10)))
     for (const code of params) {

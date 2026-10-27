@@ -67,7 +67,9 @@
     "./factory": "./src/components/factory.tsx",
     "./hotkeys": "./src/providers/hotkeys/index.tsx",
     "./interaction": "./src/providers/interaction/index.tsx",
-    "./locale": "./src/providers/locale/index.tsx"
+    "./locale": "./src/providers/locale/index.tsx",
+    "./kit": "./src/kit/index.ts",
+    "./kit/*": "./src/kit/*/index.tsx"
   },
   "scripts": {
     "build": "NODE_OPTIONS=\"--max-old-space-size=16384 --max-semi-space-size=512\" tsup",

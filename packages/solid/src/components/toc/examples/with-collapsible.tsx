@@ -1,7 +1,7 @@
 import { Collapsible } from '@codesign-ui/solid/collapsible'
 import { Toc } from '@codesign-ui/solid/toc'
 import { ChevronRightIcon } from 'lucide-solid'
-import CollapsibleStyles from 'styles/Collapsible.module.css'
+import CollapsibleStyles from 'styles/collapsible.module.css'
 import styles from 'styles/toc.module.css'
 
 const items = [

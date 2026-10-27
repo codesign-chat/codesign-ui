@@ -67,7 +67,9 @@
     "./factory": "./src/components/factory.ts",
     "./hotkeys": "./src/providers/hotkeys/index.ts",
     "./interaction": "./src/providers/interaction/index.ts",
-    "./locale": "./src/providers/locale/index.ts"
+    "./locale": "./src/providers/locale/index.ts",
+    "./kit": "./src/kit/index.ts",
+    "./kit/*": "./src/kit/*/index.ts"
   },
   "scripts": {
     "build": "vite build",

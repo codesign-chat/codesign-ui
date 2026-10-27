@@ -84,6 +84,46 @@
           "default": "./dist/utils/index.cjs"
         }
       },
+      "./ai": {
+        "import": {
+          "types": "./dist/ai/index.d.ts",
+          "default": "./dist/ai/index.js"
+        },
+        "require": {
+          "types": "./dist/ai/index.d.cts",
+          "default": "./dist/ai/index.cjs"
+        }
+      },
+      "./ai/*": {
+        "import": {
+          "types": "./dist/ai/*/index.d.ts",
+          "default": "./dist/ai/*/index.js"
+        },
+        "require": {
+          "types": "./dist/ai/*/index.d.cts",
+          "default": "./dist/ai/*/index.cjs"
+        }
+      },
+      "./kit": {
+        "import": {
+          "types": "./dist/kit/index.d.ts",
+          "default": "./dist/kit/index.js"
+        },
+        "require": {
+          "types": "./dist/kit/index.d.cts",
+          "default": "./dist/kit/index.cjs"
+        }
+      },
+      "./kit/*": {
+        "import": {
+          "types": "./dist/kit/*/index.d.ts",
+          "default": "./dist/kit/*/index.js"
+        },
+        "require": {
+          "types": "./dist/kit/*/index.d.cts",
+          "default": "./dist/kit/*/index.cjs"
+        }
+      },
       "./*": {
         "import": {
           "types": "./dist/components/*/index.d.ts",

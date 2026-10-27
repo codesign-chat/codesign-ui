@@ -14,20 +14,15 @@
         "solid": "./dist/components/anatomy.jsx",
         "default": "./dist/components/anatomy.js"
       },
-      "./factory": {
-        "types": "./dist/components/factory.d.ts",
-        "solid": "./dist/components/factory.jsx",
-        "default": "./dist/components/factory.js"
-      },
       "./environment": {
         "types": "./dist/providers/environment/index.d.ts",
         "solid": "./dist/providers/environment/index.jsx",
         "default": "./dist/providers/environment/index.js"
       },
-      "./locale": {
-        "types": "./dist/providers/locale/index.d.ts",
-        "solid": "./dist/providers/locale/index.jsx",
-        "default": "./dist/providers/locale/index.js"
+      "./factory": {
+        "types": "./dist/components/factory.d.ts",
+        "solid": "./dist/components/factory.jsx",
+        "default": "./dist/components/factory.js"
       },
       "./hotkeys": {
         "types": "./dist/providers/hotkeys/index.d.ts",
@@ -39,17 +34,32 @@
         "solid": "./dist/providers/interaction/index.jsx",
         "default": "./dist/providers/interaction/index.js"
       },
+      "./kit": {
+        "types": "./dist/kit/index.d.ts",
+        "solid": "./dist/kit/index.jsx",
+        "default": "./dist/kit/index.js"
+      },
+      "./kit/*": {
+        "types": "./dist/kit/*/index.d.ts",
+        "solid": "./dist/kit/*/index.jsx",
+        "default": "./dist/kit/*/index.js"
+      },
+      "./locale": {
+        "types": "./dist/providers/locale/index.d.ts",
+        "solid": "./dist/providers/locale/index.jsx",
+        "default": "./dist/providers/locale/index.js"
+      },
       "./utils": {
         "types": "./dist/utils/index.d.ts",
         "solid": "./dist/utils/index.jsx",
         "default": "./dist/utils/index.js"
       },
+      "./package.json": "./package.json",
       "./*": {
         "types": "./dist/components/*/index.d.ts",
         "solid": "./dist/components/*/index.jsx",
         "default": "./dist/components/*/index.js"
-      },
-      "./package.json": "./package.json"
+      }
     }
   }
 }

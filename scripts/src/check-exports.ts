@@ -8,6 +8,7 @@ const main = async () => {
   const components = await globby([
     '../packages/react/src/components/*/index.ts',
     '!../packages/react/src/components/{portal,presence,client-only}/**',
+    '../packages/react/src/kit/*/index.ts',
   ])
 
   const frameworkExports = components.sort().map((component) =>

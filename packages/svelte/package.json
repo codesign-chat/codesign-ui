@@ -105,6 +105,16 @@
       "types": "./src/lib/utils/index.ts",
       "svelte": "./src/lib/utils/index.ts",
       "default": "./src/lib/utils/index.ts"
+    },
+    "./kit": {
+      "types": "./src/lib/kit/index.ts",
+      "svelte": "./src/lib/kit/index.ts",
+      "default": "./src/lib/kit/index.ts"
+    },
+    "./kit/*": {
+      "types": "./src/lib/kit/*/index.ts",
+      "svelte": "./src/lib/kit/*/index.ts",
+      "default": "./src/lib/kit/*/index.ts"
     }
   },
   "scripts": {
@@ -145,7 +155,13 @@
       "exports.\\./utils.default": "./dist/utils/index.js",
       "exports.\\./*.svelte": "./dist/components/*/index.js",
       "exports.\\./*.types": "./dist/components/*/index.d.ts",
-      "exports.\\./*.default": "./dist/components/*/index.js"
+      "exports.\\./*.default": "./dist/components/*/index.js",
+      "exports.\\./kit.svelte": "./dist/kit/index.js",
+      "exports.\\./kit.types": "./dist/kit/index.d.ts",
+      "exports.\\./kit.default": "./dist/kit/index.js",
+      "exports.\\./kit/*.svelte": "./dist/kit/*/index.js",
+      "exports.\\./kit/*.types": "./dist/kit/*/index.d.ts",
+      "exports.\\./kit/*.default": "./dist/kit/*/index.js"
     }
   },
   "publishConfig": {
